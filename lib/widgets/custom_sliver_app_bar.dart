@@ -9,7 +9,7 @@ class CustomSliverAppBar extends StatelessWidget {
       leading: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Text(
-          'N',
+          'M',
           style: TextStyle(
               color: Color(0xffE40A15),
               fontSize: 40,
