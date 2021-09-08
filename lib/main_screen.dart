@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:yeonflix/http_controller.dart';
 import 'package:yeonflix/widgets/custom_sliver_app_bar.dart';
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends GetView<HttpController> {
   const MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       backgroundColor: Color(0xff141414),
       extendBodyBehindAppBar: true,
       body: CustomScrollView(
@@ -21,7 +23,6 @@ class MainScreen extends StatelessWidget {
                     margin: EdgeInsets.symmetric(vertical: 10),
                     height: 500,
                   );
-                  ;
                 } else {
                   return Container(
                     color: Colors.blueGrey,
@@ -36,6 +37,7 @@ class MainScreen extends StatelessWidget {
                           color: Colors.blue,
                           height: 80,
                           width: 50,
+                          child: Text(controller.movieList.value.items[index].title),
                         );
                       },
                     ),
