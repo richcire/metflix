@@ -1,15 +1,15 @@
-class Movie {
+class Tv {
   final String title;
   final String image;
 
-  Movie({
+  Tv({
     required this.title,
     required this.image,
   });
 
-  factory Movie.fromJson(Map<String, dynamic> json) {
-    return Movie(
-      title: json['original_title'],
+  factory Tv.fromJson(Map<String, dynamic> json) {
+    return Tv(
+      title: json['original_name'],
       image: json['poster_path'],
     );
   }
